@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "oktasampleapi.fullname" . }}
+  labels:
+    app: {{ template "oktasampleapi.name" . }}
+    chart: {{ template "oktasampleapi.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "oktasampleapi.name" . }}
+    release: {{ .Release.Name }}
