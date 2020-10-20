@@ -1,0 +1,23 @@
+﻿namespace OktaSampleApi.Swagger
+{
+    public class SwaggerSettings : ISwaggerSettings
+    {
+        public bool UseSwagger { get; set; }
+        public string DocumentName { get; set; }
+        public string Version { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string TermsOfService { get; set; }
+        public string ContactName { get; set; }
+        public string ContactEmail { get; set; }
+        public string ContactUrl { get; set; }
+        public string LicenseName { get; set; }
+        public string LicenseUrl { get; set; }
+        public string RouteTemplate { get; set; }
+        public string UiRoutePrefix { get; set; }
+        public string UiEndpointUrl { get; set; }
+        public string UiEndpointDescription { get; set; }
+        public bool ApiKeyProtected { get; set; }
+        public string ApiKeyHeaderName { get; set; }
+    }
+}

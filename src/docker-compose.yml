@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  OktaSampleApi:
+    image: ${DOCKER_REGISTRY-}oktasampleapi
+    build:
+      context: .
+      dockerfile: OktaSampleApi/Dockerfile
+
+  OktaSampleWeb:
+    image: ${DOCKER_REGISTRY-}oktasampleweb
+    build:
+      context: .
+      dockerfile: OktaSampleWeb/Dockerfile
+
